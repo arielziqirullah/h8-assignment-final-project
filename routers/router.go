@@ -103,7 +103,7 @@ func Run() *gin.Engine {
 		return routes
 	} else {
 		log.Println("listening and serving on port " + os.Getenv("RUNNING_PORT"))
-		routes.Run(os.Getenv("RUNNING_PORT"))
+		routes.Run(":" + os.Getenv("RUNNING_PORT"))
 		return routes
 	}
 }
